@@ -1,0 +1,24 @@
+{		
+    "name": "Extension Reloader Macros",
+    "version": "0.1",
+    "description": "Reload selected extensions with a shortcut (alt+r) which also refreshes the currently opened tab once the extension is reloaded.",
+
+    "permissions": [
+        "background",
+		"management",
+		"tabs"
+    ],
+
+    "background_page": "background.html",
+	"options_page": "options.html",
+
+    "content_scripts": [
+		{
+			"all_frames": true,
+			"matches": [ "<all_urls>" ],
+			"js":      [ "jquery-1.6.1.min.js", "contentscript.js" ],
+			"run_at":  "document_end"
+		}
+    ]
+
+}

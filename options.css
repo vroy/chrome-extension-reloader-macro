@@ -1,0 +1,19 @@
+.extension {
+	height: 32px;
+
+	margin-bottom: 10px;
+}
+.extension .reload {
+	height: 12px;
+	position: relative;
+	top: -10px;
+}
+.extension .name {
+	height: 18px;
+	position: relative;
+	top: -10px;
+}
+.extension .icon {
+	height: 32px;
+	width: 32px;
+}

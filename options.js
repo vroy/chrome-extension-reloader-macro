@@ -31,8 +31,16 @@ $(document).ready(function() {
 	chrome.management.getAll(function(extensions) {
 		var to_reload = extensionsToReload();
 
+		var sorted_extensions = [ ];
 		for (var i in extensions) {
 			var extension = extensions[i];
+			if (extension.name == "Extension Reloader Macros") continue;
+			sorted_extensions.push( [extension.name.toLowerCase(), extension] );
+		}
+		sorted_extensions.sort();
+
+		for (var i in sorted_extensions) {
+			var extension = sorted_extensions[i][1];
 
 			// get a visible copy of the stub.
 			var stub = $(".extension.stub").clone().removeClass("stub").show();

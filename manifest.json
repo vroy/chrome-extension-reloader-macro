@@ -19,6 +19,12 @@
 			"js":      [ "jquery-1.6.1.min.js", "contentscript.js" ],
 			"run_at":  "document_end"
 		}
-    ]
+    ],
+	
+	"icons": {
+		"16": "logo/logo-16.png",
+		"48": "logo/logo-48.png",
+		"128": "logo/logo-128.png"
+	}
 
 }

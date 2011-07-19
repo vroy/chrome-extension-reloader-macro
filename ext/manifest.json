@@ -2,6 +2,7 @@
     "name": "Chrome Extension Reloader Macro",
     "version": "0.1",
     "description": "Reload selected chrome extensions and currently opened tab with a shortcut (alt+r)",
+	"homepage_url": "https://github.com/exploid/chrome-extension-reloader-macro",
 
     "permissions": [
         "background",

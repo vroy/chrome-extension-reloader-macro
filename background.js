@@ -1,15 +1,11 @@
 chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
-	// When we receive a request, trigger a reload of every extensions that are saved in the extension localStorage.
-	var to_reload = extensionsToReload();
+	var to_reload = extensionsToReload(); // Read config from localStorage
 
 	for (var ext_id in to_reload) {
-		if ( to_reload[ext_id] ) {
-		
-			// Disable the function, and when it's done, re-activate the extension and let the sender know that we're done.
-			chrome.management.setEnabled(ext_id, false, function() {
-				chrome.management.setEnabled(ext_id, true);
-				
-				sendResponse(); // trigger window refresh
+		if ( to_reload[ext_id] ) { // Only reload selected extensions
+			chrome.management.setEnabled(ext_id, false, function() { // Disable extension
+				chrome.management.setEnabled(ext_id, true); // Enable extension once disabled
+				sendResponse(); // Let sender know to trigger a refresh
 			});
 		}
 	}

@@ -34,7 +34,7 @@ $(document).ready(function() {
 		var sorted_extensions = [ ];
 		for (var i in extensions) {
 			var extension = extensions[i];
-			if (extension.name == "Extension Reloader Macros") continue;
+			if (extension.name == "Chrome Extension Reloader Macro") continue;
 			sorted_extensions.push( [extension.name.toLowerCase(), extension] );
 		}
 		sorted_extensions.sort();

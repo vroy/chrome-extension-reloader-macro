@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	$(window).keypress(function(e) {
+	$(document).keypress(function(e) {
 		// alt + r == 174
 		if ( e.keyCode == 174 ) {
 			// Send a request to the background page that triggers a reload of the selected extensions in the options page.
